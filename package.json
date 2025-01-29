@@ -1,0 +1,15 @@
+{
+  "name": "cypress-api-new",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "npx cypress run", 
+    "open": "npx cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@faker-js/faker": "^9.4.0"
+  }
+}
