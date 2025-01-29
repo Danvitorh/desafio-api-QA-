@@ -1,7 +1,7 @@
 import { consultaUsuarioRequest } from '../../support/requestObjects/consultaUsuariosRequest.js';
 
 it('Deve consultar os dados do usuário com sucesso', () => {
-  const idUsuario = '1JtTcVoAlLJRZoIF'; 
+  const idUsuario = '0uxuPY0cbmQhpEz1'; 
 
   cy.request(consultaUsuarioRequest(idUsuario)).then(response => {
     expect(response.status).to.eq(200);
