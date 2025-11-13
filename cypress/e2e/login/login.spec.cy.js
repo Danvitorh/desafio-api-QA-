@@ -14,7 +14,7 @@ describe('Testes de Login', () => {
     const email = 'email_invalido@qa.com';
     const password = '123';
 
-    // Reaproveita loginRequest para o teste de login inválido
+    
     cy.request({
       ...loginRequest(email, password),
       failOnStatusCode: false

@@ -1,4 +1,3 @@
-// cypress/support/requestObjects/loginRequest.js
 export const loginRequest = (email, password) => {
     return {
       method: 'POST',

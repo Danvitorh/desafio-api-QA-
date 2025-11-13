@@ -1,4 +1,4 @@
-import './cadastroRequest';
-import './consultaProdutosRequest';
-import './consultaUsuariosRequest';
+import './carrinhosRequest';
+import './produtosRequest';
+import './usuariosRequest';
 import './loginRequest';

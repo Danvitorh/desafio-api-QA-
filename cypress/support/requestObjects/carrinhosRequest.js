@@ -8,7 +8,7 @@ export const consultarCarrinhosRequest = () => {
   };
 };
 
-// Cadastrar carrinho
+
 export const cadastrarCarrinhoRequest = (produtoId, quantidade = 1) => {
   return {
     method: 'POST',
@@ -28,13 +28,3 @@ export const cadastrarCarrinhoRequest = (produtoId, quantidade = 1) => {
   };
 };
 
-// Deletar carrinho (opcional, se quiser manter)
-export const deletarCarrinhoRequest = (id) => {
-  return {
-    method: 'DELETE',
-    url: `/carrinhos/${id}`,
-    headers: {
-      Authorization: Cypress.env('token')
-    }
-  };
-};

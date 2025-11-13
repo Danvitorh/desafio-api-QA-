@@ -5,10 +5,9 @@ describe('Validação de Carrinho Existente', () => {
   let idProdutoExistente;
 
   before(() => {
-    // Faz login e armazena token
+   
     cy.login('fulano@qa.com', 'teste');
 
-    // Consulta produtos para pegar um id válido
     cy.request({
       method: 'GET',
       url: '/produtos',
