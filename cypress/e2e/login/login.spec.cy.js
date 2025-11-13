@@ -1,15 +1,27 @@
-// cypress/integration/api/login.spec.js
 import { loginRequest } from '../../support/requestObjects/loginRequest.js';
 
 describe('Testes de Login', () => {
-  it('Deve realizar login com sucesso', () => {
-    const email = 'admin@mail.com';
-    const password = 'qwe123';
 
-    cy.request(loginRequest(email, password)).then(response => {
-        expect(response.status).to.eq(200);
-        expect(response.body.message).to.eq('Login realizado com sucesso');
-      });
-      
+  it('Deve realizar login com sucesso', () => {
+    
+    cy.login('fulano@qa.com', 'teste').then((token) => {
+      expect(token).to.be.a('string').and.not.be.empty;
+      expect(Cypress.env('token')).to.eq(token);
     });
   });
+
+  it('Deve falhar ao realizar login com credenciais inválidas', () => {
+    const email = 'email_invalido@qa.com';
+    const password = '123';
+
+    // Reaproveita loginRequest para o teste de login inválido
+    cy.request({
+      ...loginRequest(email, password),
+      failOnStatusCode: false
+    }).then((response) => {
+      expect(response.status).to.eq(401);
+      expect(response.body).to.have.property('message', 'Email e/ou senha inválidos');
+    });
+  });
+
+});

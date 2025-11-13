@@ -1,4 +1,4 @@
-import { cadastroRequest } from '../../support/requestObjects/cadastroRequest';
+import { cadastroUsuarioRequest } from '../../support/requestObjects/usuariosRequest.js';
 import { faker } from '@faker-js/faker';
 
 describe('Testes de Cadastro de Usuário', () => {
@@ -8,7 +8,7 @@ describe('Testes de Cadastro de Usuário', () => {
     const password = faker.internet.password();
     const administrador = "false";
 
-    cy.request(cadastroRequest(nome, email, password, administrador)).then(response => {
+    cy.request(cadastroUsuarioRequest(nome, email, password, administrador)).then(response => {
       expect(response.status).to.eq(201);
       expect(response.body.message).to.eq('Cadastro realizado com sucesso');
 

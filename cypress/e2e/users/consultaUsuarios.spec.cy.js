@@ -1,4 +1,4 @@
-import { consultaUsuarioRequest } from '../../support/requestObjects/consultaUsuariosRequest.js';
+import { consultaUsuarioRequest } from '../../support/requestObjects/usuariosRequest.js';
 
 it('Deve consultar os dados do usuário com sucesso', () => {
   const idUsuario = '0uxuPY0cbmQhpEz1'; 

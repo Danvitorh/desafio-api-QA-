@@ -1,5 +1,4 @@
-// cypress/integration/products/consultaProdutos.spec.cy.js
-import { consultaProdutosRequest } from '../../support/requestObjects/consultaProdutosRequest';
+import { consultaProdutosRequest } from '../../support/requestObjects/produtosRequest';
 
 describe('Testes de Consulta de Produtos', () => {
   it('Deve listar produtos com sucesso', () => {
