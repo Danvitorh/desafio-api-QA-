@@ -7,7 +7,7 @@ describe('Testes de Cadastro de Produtos', () => {
 
   it('Deve cadastrar um produto com sucesso', () => {
     const produto = {
-      nome: 'Camiseta viagem',
+      nome: 'Camiseta time',
       preco: 3500,
       descricao: 'Camiseta',
       quantidade: 15
@@ -29,7 +29,7 @@ describe('Testes de Cadastro de Produtos', () => {
 
   it('Deve retornar erro ao tentar cadastrar produto com nome duplicado', () => {
     const produtoDuplicado = {
-      nome: 'Camiseta hockey no gelo', 
+      nome: 'Camiseta time', 
       preco: 3500,
       descricao: 'Produto duplicado',
       quantidade: 5
