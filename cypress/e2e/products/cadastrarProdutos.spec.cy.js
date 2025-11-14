@@ -5,14 +5,16 @@ describe('Testes de Cadastro de Produtos', () => {
     cy.login('fulano@qa.com', 'teste'); 
   });
 
-  it('Deve cadastrar um produto com sucesso', () => {
-    const produto = {
-      nome: 'Camiseta time',
-      preco: 3500,
-      descricao: 'Camiseta',
-      quantidade: 15
-    };
+ it('Deve cadastrar um produto com sucesso', () => {
+  
+  const nomeRandom = `Produto-${Math.floor(Math.random() * 100000)}`;
 
+  const produto = {
+    nome: nomeRandom,
+    preco: 3500,
+    descricao: 'Camiseta',
+    quantidade: 15
+  };
     const token = Cypress.env('token');
 
     cy.request({
